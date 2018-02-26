@@ -1,0 +1,351 @@
+$main-font: "Open Sans Condensed", sans-serif;
+$gold: gold;
+$darkgray: darkgray;
+$lightcoral: lightcoral;
+$seashell: seashell;
+$white: whitesmoke;
+
+$red500: #F44336; 
+$red50: #FFEBEE;
+$red100: #FFCDD2;
+$red200: #EF9A9A;
+$red300: #E57373;
+$red500: #F44336;
+$red700: #D32F2F;
+$red900: #B71C1C;
+
+#map {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
+}
+
+@mixin bp-small{
+  @media only screen and (max-width: 600px){
+    @content;
+  }
+}
+@mixin bp-medium{
+  @media only screen and (min-width: 600px){
+    @content;
+  }
+}
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+*,*:before,*:after{
+  box-sizing: border-box;
+}
+body{
+  background-color: snow;
+}
+a{
+  color: $red500;
+  text-decoration: none;
+  &:hover{
+    color: $red900;
+    
+  }
+}
+
+.container{
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  @include bp-small{
+    max-width: 90%;
+  }
+  strong{
+    background: yellow;
+  }
+  
+}
+
+.welcome-message{
+  position: relative;
+  padding: 100px 30px 45px 30px;
+  min-height: 500px;
+  background-image: url("https://unsplash.imgix.net/45/eDLHCtzRR0yfFtU0BQar_sylwiabartyzel_themap.jpg?q=75&fm=jpg&s=dbcec945d03026d723474aca70247bcb");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px 0 32px;
+  @include bp-small{
+    padding: 30px 10px 20px 10px;
+    min-height: 200px;
+  }
+  &:before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(4,4,4,.5);
+  }
+  h1{
+    font-size: 63px;
+    margin: 20px 0 50px;
+    color: #fff;
+  }
+  h2{
+    font-size: 32px;
+    color: #f0f0f0;
+    margin: 0;
+  }
+}
+
+.site-header{
+  position: relative;
+  padding: 15px;
+  font-family: $main-font;
+  @include bp-small{
+    padding: 15px 0;
+  }
+  .site-logo,
+  .site-nav{
+    float: left;
+    width: 50%;
+  }
+  .site-nav{
+    margin: 5px 0 0;
+    text-align: right;
+    li{
+      display: inline-block;
+      margin: 0 5px;
+    }
+    a{
+      font-size: 1.1em;
+      display: block;
+      padding: 5px;
+      color: $red500;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 300;
+      transition: color .2s ease;
+      border: 0;
+      transition: color .5s ease-in-out;
+      &:hover{
+        color: $red900;         
+      }
+      &.active{
+        color: #222;
+      }
+    }
+  }
+  .site-logo{
+    text-align: left;
+    font-weight: 700;
+    margin: 0;
+    h1{
+      margin: 0;
+      color: $red900;
+    }
+  }
+}
+
+.site-nav ul,
+.sidebar ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#responsive-menu{
+  display: none;
+  margin: 0;
+  padding: 20px 15px;
+  position: absolute;
+  z-index: 100;
+  top: 73px;
+  left: 0;
+  width: 100%;
+  background: #222;
+  @include bp-medium{
+    display: none !important;
+  }
+  li{
+    display: block;
+  }
+  a{
+    display: block;
+    color: crimson;
+    border: none;
+    margin: 20px 0;
+    font-size: 1.5em;
+    font-family: $main-font;
+    transition: color .2s ease-in;
+    &:hover,&.active{
+      color: $white;
+    }
+  }
+}
+
+#std-menu{
+  display: block;
+  @include bp-small{
+    display: none;
+  }
+}
+#menu-trigger{
+  display: none;
+  transition: none;
+  border: 0;
+  .fa{
+    color: #222;
+    transition: color .2s ease-in-out;
+    &:hover{
+      color: crimson;
+    }
+  }
+
+  @include bp-medium{
+    display:none;
+  }
+  @include bp-small{
+    display: block;
+  }
+}
+
+.content{
+  padding: 15px;
+  .main{
+    float: left;
+    width: 55%;
+    @include bp-small{
+      float: none;
+      width: 100%;
+     a{
+       border: 0 !important;
+     }
+    }
+  }
+  .sidebar{
+    margin: 20px 0 0;
+    padding: 5px;
+    float: right;
+    width: 40%;
+    @include bp-small{
+      float: none;
+      width: 100%;
+    }
+  }
+  .window{
+    border-radius: 5px;
+    background: #f0f0f0;
+    box-shadow: 0 5px 5px silver;
+    padding: 15px;
+    margin: 0 0 33px;
+    &.window-has-contact{
+      background: #f9f9f9;
+    }
+  }
+}
+
+.site-footer{
+  clear: both;
+  margin: 30px 0 0;
+  padding: 10px 0;
+  text-align: center;
+}
+
+
+/* form controls */
+
+.form{
+  font-family: $main-font;
+  width: 100%;
+  label{
+    display:block;
+    margin: 0 0 5px;
+  }
+  .form-block{
+    margin: 10px 0;
+    min-width: 100%;
+    display: block;
+  }
+  input,textarea{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #d1d1d1;
+  }
+  #send-btn{
+    padding: 10px;
+    outline: none;
+    border: 0;
+    background-color: $red500;
+    color: $white;
+    font-family: $main-font !important;
+    width: 100%;
+    font-size: 1.1em;
+    box-shadow: 0 2px 3px silver;
+  }
+}
+
+
+/* Animations  */
+
+.rotate-clockwise{
+  -webkit-animation: rt-clock .22s ease-in-out forwards;
+}
+.rotate-counter{
+  -webkit-animation: rt-counter .22s ease-in-out forwards;
+}
+
+@-webkit-keyframes rt-clock{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(45deg);
+  }
+  100%{
+    transform: rotate(90deg);
+  }
+}
+@-webkit-keyframes rt-counter{
+  0%{
+    transform: rotate(90deg);
+  }
+  50%{
+    transform: rotate(45deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+.flash{
+  position: relative;
+  left: 0;
+  -webkit-animation: flash 3s ease-in-out forwards;
+}
+
+@-webkit-keyframes flash{
+  
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Salahe</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+      
+</head>
+
+<body>
+
+  <header class="site-header cf">
+  <div class="container">
+    <div class="site-logo"><h1>Salahe</h1></div>
+    <nav class="site-nav">
+      <ul id="std-menu">
+        <li><a class="active" href="">Home</a></li>
+        <li><a href="">Signin</a></li>
+        <li><a href="">Signup</a></li>
+      </ul>
+      <a href="" id="menu-trigger"><i class="fa fa-bars fa-lg"></i></a>
+    </nav>
+  </div> <!-- /container -->
+</header>
+ <ul id="responsive-menu">
+  <li><a class="active" href="">Home</a></li>
+  <li><a href="">Signin</a></li>
+  <li><a href="">Signup</a></li>
+</ul>
+
+<!-- <div class="welcome-message">
+    
+  <div class="container">
+      
+  <h1>Discover. Explore. Play.</h1>
+  <h2>The World is your oyster.</h2>
+  </div>
+</div>  -->
+<h3>Current location</h3>
+<div id="map" ></div>
+<hr>
+<p >
+    <button type="button" class="btn btn-link" onclick="show();">Restaurants</button>
+    <button type="button" class="btn btn-link">Movies</button>
+    <button type="button" class="btn btn-link">Shopping</button>
+    <button type="button" class="btn btn-link">Packers and Movers</button>
+</p>
+<div id="id1" class="class1">
+    <img data-src="http://lorempixel.com/400/200" alt="">
+  </div>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="sb">
+  <input class="sb_input"></input>
+  <button class="sb_validate fa fa-search"></button>
+  <button class="sb_cancel fa fa-times"></button>
+  <div class="result"></div>
+</div>
+
+<div class="container">
+  <div class="content">
+    <section class="main">
+      <article>
+        <h1>Title</h1>
+    </article>
+      <article>
+        <h1></h1>
+     
+      </article>
+
+    </section>
+
+    
+
+    <aside class="sidebar">
+      <div class="window">
+         <h2>Interesting stuff.</h2>
+         <ul>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, dolores.</p>
+          <li><a href="https://www.google.com">Lorem ipsum dolor.</a></li>
+          <li><a href="https://www.google.com">Lorem ipsum dolor sit.</a></li>
+          <li><a href="https://www.google.com">Lorem ipsum.</a></li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, eum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi non at quae, libero dolor iure.</p>
+      </div>
+      <div class="window window-has-contact">
+        <form class="form" action="">
+          <h2>Dont forget to contact us.</h2>
+          <div class="form-block">
+            <label for="name">Your name:</label>
+            <input type="text" id="name" />
+          </div>
+          <div class="form-block">
+            <label for="email">Your email:</label>
+            <input type="email" id="email" />
+          </div>
+          <div class="form-block">
+            <label for="message">Message:</label>
+            <textarea id="message" cols="30" rows="10"></textarea>
+          </div>
+          <div class="form-block">
+            <button id="send-btn" type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </aside>
+  </div>
+
+</div><!--\Container-->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.min.js'></script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp4zq739AYCMcF3U00DK2yrU2yRC1hqG8&callback=initMap">
+</script>
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
